@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "reviewId": { "type": ["string", "null"] },
+    "authorName": { "type": ["string", "null"] },
+    "comments": { "type": ["array", "null"] },
+    "last_modified_seconds": { "type": ["integer", "null"] }
+  }
+}

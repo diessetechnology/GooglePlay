@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "sku": { "type": ["string", "null"] },
+    "status": { "type": ["string", "null"] },
+    "purchaseType": { "type": ["string", "null"] },
+    "defaultPrice": { "type": ["object", "null"], "additionalProperties": true }
+  }
+}

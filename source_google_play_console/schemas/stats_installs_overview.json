@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "Date": { "type": ["string", "null"] },
+    "Package Name": { "type": ["string", "null"] },
+    "Daily Device Installs": { "type": ["string", "null"] },
+    "Daily Device Uninstalls": { "type": ["string", "null"] },
+    "Daily Device Upgrades": { "type": ["string", "null"] },
+    "Daily User Installs": { "type": ["string", "null"] },
+    "Daily User Uninstalls": { "type": ["string", "null"] },
+    "Active Device Installs": { "type": ["string", "null"] },
+    "Install events": { "type": ["string", "null"] },
+    "Update events": { "type": ["string", "null"] },
+    "Uninstall events": { "type": ["string", "null"] },
+    "report_bucket_id": { "type": ["string", "null"] },
+    "report_object": { "type": ["string", "null"] },
+    "report_month": { "type": ["string", "null"] },
+    "report_breakdown": { "type": ["string", "null"] },
+    "report_object_updated_at": { "type": ["string", "null"] }
+  }
+}

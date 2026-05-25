@@ -1,0 +1,3 @@
+airbyte-cdk
+google-auth
+requests

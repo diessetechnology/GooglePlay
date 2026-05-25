@@ -1,0 +1,45 @@
+{
+  "documentationUrl": "https://developers.google.com/android-publisher",
+  "connectionSpecification": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Google Play Console Spec",
+    "type": "object",
+    "required": ["service_account_info", "package_name"],
+    "additionalProperties": false,
+    "properties": {
+      "service_account_info": {
+        "type": "string",
+        "title": "Service Account JSON",
+        "description": "Contenuto JSON del Service Account (non un path). Deve avere accesso ad Android Publisher API per l'app indicata. Per i report di download/installs via Cloud Storage, lo stesso Service Account deve anche essere aggiunto come utente in Play Console e avere permessi adeguati.",
+        "airbyte_secret": true
+      },
+      "package_name": {
+        "type": "string",
+        "title": "Package name",
+        "description": "Esempio: com.example.app"
+      },
+      "start_date": {
+        "type": "string",
+        "title": "Start date",
+        "description": "Filtro client-side per i dati incrementali (RFC3339). Usato per reviews tramite lastModified.",
+        "format": "date-time"
+      },
+      "reports_bucket_id": {
+        "type": "string",
+        "title": "Reports bucket id (pubsite_prod_rev_...)",
+        "description": "Bucket privato Google Cloud Storage dei report Play Console (inizia con pubsite_prod_rev_...). Se valorizzato abilita lo stream installs/downloads (stats/installs)."
+      },
+      "stats_installs_breakdown": {
+        "type": "string",
+        "title": "Installs breakdown",
+        "description": "Filtro per il tipo di file in stats/installs. Tipici: overview, country, device, language, os_version, app_version, carrier, tablets.",
+        "default": "overview"
+      },
+      "stats_installs_month": {
+        "type": "string",
+        "title": "Installs month (YYYYMM)",
+        "description": "Se valorizzato, scarica solo i CSV di quel mese (es. 202605). Se vuoto, scarica tutti i file matching il breakdown."
+      }
+    }
+  }
+}
